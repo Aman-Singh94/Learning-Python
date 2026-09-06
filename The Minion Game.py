@@ -35,27 +35,28 @@ The game ends when both players have made all possible substrings.  """
 #0<len(s)<=10^6
 
 
+print("=== The Minion Game ===")
 
-def minion_game(string):
-    vowels = set('AEIOU')
-    n = len(string)
-    kevin = 0
-    stuart = 0
-    for i in range(n):
-        if string[i] in vowels:
-            kevin += (n - i)
-        else:
-            stuart += (n - i)
-    if kevin > stuart:
-        print(f"Kevin {kevin}")
-    elif stuart > kevin:
-        print(f"Stuart {stuart}")
+s = input("Enter your string: ")
+
+vowels = "AEIOU"
+kevin = 0
+stuart = 0
+
+for i in range(len(s)):
+
+    if s[i] in vowels:
+        kevin = kevin + (len(s) - i)
     else:
-        print("Draw")
+        stuart = stuart + (len(s) - i)
 
-if __name__ == '__main__':
-    s = input().strip()
-    minion_game(s)
+if kevin > stuart:
+    print("Kevin", kevin)
+elif stuart > kevin:
+    print("Stuart", stuart)
+else:
+    print("Draw")
+    
 
 
 
