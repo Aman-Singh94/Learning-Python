@@ -56,10 +56,3 @@ elif stuart > kevin:
     print("Stuart", stuart)
 else:
     print("Draw")
-    
-
-
-
-
-
-#ye mere ko nhi aata aabhi too par baad ka pata nhi 
