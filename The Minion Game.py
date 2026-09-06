@@ -35,31 +35,6 @@ The game ends when both players have made all possible substrings.  """
 #0<len(s)<=10^6
 
 
-"""def minion_game(string):
-    vowels = set('AEIOU')
-    n = len(string)
-    kevin = 0
-    stuart = 0
-    for i in range(n):
-        # A substring starting at index i contributes (n - i) substrings
-        # (one of each length from 1 to n-i). Award them to the right player
-        # based on the starting letter.
-        if string[i] in vowels:
-            kevin += (n - i)
-        else:
-            stuart += (n - i)
-    if kevin > stuart:
-        print(f"Kevin {kevin}")
-    elif stuart > kevin:
-        print(f"Stuart {stuart}")
-    else:
-        print("Draw")
-
-
-if __name__ == '__main__':
-    s = input().strip()
-    minion_game(s)"""
-
 
 def minion_game(string):
     vowels = set('AEIOU')
