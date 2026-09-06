@@ -10,11 +10,16 @@ the sun. A leap year contains a leap day."""
 #This means that in the Gregorian calendar, the years 2000 and 2400 are leap years, while 1800, 1900, 2100,
 #2200, 2300 and 2500 are NOT leap years.
 n=int(input("Enter your year: "))
-if n % 4 == 0:
-    if n % 100 == 0:
-        if n % 400 == 0:
-            print("Leap year")
+if 1900 <= n <= 10**5:
+    if n % 4 == 0:
+        if n % 100 == 0:
+            if n % 400 == 0:
+                print("Leap year")
+            else:
+                print("Not Leap year")
         else:
-            print("Not Leap year")
+            print("Leap year")
     else:
         print("Leap year")
+else:
+    print("Year is out of range. It should be between 1900 and 100000.1800")
