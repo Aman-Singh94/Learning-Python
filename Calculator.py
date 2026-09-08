@@ -1,11 +1,38 @@
-read=open("file1.txt","r")
-#print(read.read())  
-print(read.readline())  # This will read the first line of the file
-read.close()
- #it is important to close the file after reading it to free up system resources.
+print("===== CALCULATOR =====")
 
-# We only read the file and print the content of the file, which is in the folder of python(main folder).
-#read1=open(r"C:\python's file\file1.txt","r")
-#print(read.read())
+num1 = float(input("Enter first number: "))
+operator = input("Enter operator (+, -, *, /): ")
+num2 = float(input("Enter second number: "))
+
+if operator == "+":
+    result = num1 + num2
+elif operator == "-":
+    result = num1 - num2
+elif operator == "*":
+    result = num1 * num2
+elif operator == "/":
+    result = num1 / num2
+else:
+    result = "Invalid operator"
+
+print("Result:", result)
 
 
+# Save history
+file = open("Calculator.txt", "a")
+
+file.write(str(num1) + " " + operator + " " + str(num2) + " = " + str(result) + "\n")
+
+file.close()
+
+
+# Read history
+print("\n===== CALCULATION HISTORY =====")
+
+file = open("Calculator.txt", "r")
+
+history = file.read()
+
+print(history)
+
+file.close()
