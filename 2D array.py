@@ -27,7 +27,7 @@ print(a[:, 0])#first column
 
 
 #submatrix
-print(a[0:2, 1:3])
+print(a[0:2, 1:3])#a[row_start:row_stop, column_start:column_stop]
 
 
 
